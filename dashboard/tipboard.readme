@@ -1,0 +1,25 @@
+Instructions for building the Docker Container for the Dashboard Server
+-----------------------------------------------------------------------
+
+1) Make sure you are in the directory where the tip board files have been downloaded
+
+cd ~/tipboard
+
+2) Make sure that you issue the following command so that the shell is executable
+   within the docker container.
+
+chmod +x tipboard_start.sh
+
+3) Build the docker container for the Dashboard service.
+
+sudo docker build -t tipboard -f tipboard.docker .
+
+2) Once the image has been created, start the service with the following command.
+ 
+sudo docker run -i --name=tipboard --restart=always -d -p 7272:7272 tipboard
+
+Notes:
+
+The port for this service is 7272. If you want to map it to a different port, change it
+to xxxx:7272 where xxxx is the port on the host machine. The service has been 
+designed to autostart so there is no need to restart the service if Docker starts up. 
