@@ -1,0 +1,16 @@
+# docker build -t tipboard -f tipboard.docker . 
+# docker run -i --name=tipboard --restart=always -d -p 7272:7272 tipboard
+
+
+FROM ubuntu:18.04
+RUN apt-get update && \
+    apt-get install -y python-dev redis-server nano curl python-pip && \
+    pip install tipboard && \
+    mkdir /tipboard && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . /tipboard
+ 
+CMD /tipboard/tipboard_start.sh
+
+EXPOSE 7272

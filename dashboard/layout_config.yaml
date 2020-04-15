@@ -1,44 +1,30 @@
 details:
-    page_title: DV Server Status
+    page_title: ACME STock Market Dashboard
 layout:
     - row_1_of_2:
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server1
-              title: Server 1
+        - col_1_of_3:
+            - tile_template: big_value
+              tile_id: stock_info
+              title: Stock Information
 
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server2
-              title: Server 2
-              
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server3
-              title: Server 3
-
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server4
-              title: Server 4
+        - col_2_of_3:
+            - tile_template: line_chart
+              tile_id: stock_ytd
+              title: Year to Date Stock Trend
 
     - row_1_of_2:
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server5
-              title: Server 5
+        - col_1_of_3:
+            - tile_template: fancy_listing
+              tile_id: stock_purchase
+              title: Top Buy/Sell
 
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server6
-              title: Server 6
-              
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server7
-              title: Server 7
+        - col_1_of_3:
+            - tile_template: pie_chart
+              tile_id: top_stocks
+              title: Top Stock Purchases
 
-        - col_1_of_4:
-            - tile_template: just_value
-              tile_id: server8
-              title: Server 8
+        - col_1_of_3:
+            - tile_template: line_chart
+              tile_id: stock_30day
+              title: 30 Day Moving Average
+
