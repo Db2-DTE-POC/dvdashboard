@@ -1,10 +1,8 @@
-# Db2 Version 11.5 Features and Functions
-This repository contains examples of new functionality found in Db2 11.5. In order to use these examples you must have:
-* Db2 installed locally or on the cloud
-* Jupyter Notebooks 
-* Db2 Python driver
-* Db2 Jupyter notebook extensions
+# Dashboard Service
+This repository contains docker commands for creating a Dashboard service that can be used to display graphs and data from a Db2 database.
 
-The Db2 Jupyter Extensions are already found in this repository and are used by the labs.
+There are two servers:
+1) Is used for displaying data from a Db2 database
+2) The other is used for displaying server status
 
-#### Credits: IBM 2019, George Baklarz [baklarz@ca.ibm.com]
+#### Credits: IBM 2020, George Baklarz [baklarz@ca.ibm.com]
