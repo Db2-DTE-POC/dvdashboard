@@ -1,0 +1,15 @@
+# docker build -t uptime -f uptime.docker . 
+# docker run -i --name uptime -d -p 7273:7272 uptime
+
+FROM ubuntu:18.04
+RUN apt-get update && \
+    apt-get install -y python-dev redis-server nano curl python-pip && \
+    pip install tipboard && \
+    mkdir /tipboard && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . /tipboard
+ 
+CMD /tipboard/tipboard_start.sh
+
+EXPOSE 7272

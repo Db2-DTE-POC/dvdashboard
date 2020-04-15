@@ -1,0 +1,30 @@
+Instructions for building the Docker Container for the UpTime Server
+-----------------------------------------------------------------------
+
+1) Make sure you are in the directory where the server dashboard files 
+   have been downloaded
+
+cd ~/uptime
+
+2) Make sure that you issue the following command so that the shell is executable
+   within the docker container.
+
+chmod +x tipboard_start.sh
+
+3) Build the docker container for the Uptime Dashboard service.
+
+sudo docker build -t uptime -f uptime.docker .
+
+2) Once the image has been created, start the service with the following command.
+ 
+sudo docker run -i --name=uptime --restart=always -d -p 7273:7272 uptime
+
+Notes:
+
+The port for this service is 7273. If you want to map it to a different port, change it
+to xxxx:7272 where xxxx is the port on the host machine. The service has been 
+designed to autostart so there is no need to restart the service if Docker starts up.
+
+The original Dashboard service runs on port 7272. The logic in the service does not
+allow for multiple Dashboards to be running so that is why there is a separate
+uptime dashboard. 
