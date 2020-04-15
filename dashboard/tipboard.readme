@@ -1,7 +1,7 @@
 Instructions for building the Docker Container for the Dashboard Server
 -----------------------------------------------------------------------
 
-1) Make sure you are in the directory where the tip board files have been downloaded
+1) Make sure you are in the directory where the tipboard files have been downloaded
 
 cd ~/tipboard
 
